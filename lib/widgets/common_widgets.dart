@@ -7,6 +7,8 @@ double e45 = 45;
 double e58 = 58;
 double e100 = 100;
 
+Color blueColor = const Color(0xFF5895F3);
+
 Widget heightSpace(double height) {
   return SizedBox(
     height: height,
