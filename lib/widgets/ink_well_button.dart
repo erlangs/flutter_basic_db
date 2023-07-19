@@ -29,13 +29,13 @@ class InkWellButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: Ink(
-        padding: this.padding,
-        decoration: this.decoration,
-        width: this.width,
-        height: this.height,
+        padding: padding,
+        decoration: decoration,
+        width: width,
+        height: height,
         child: InkWell(
-          onTap: this.onTap,
-          child: this.child,
+          onTap: onTap,
+          child: child,
         ),
       ),
     );
