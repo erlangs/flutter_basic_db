@@ -13,4 +13,16 @@ extension WidgetCenterX on Widget {
 
   Widget bottomRight() =>
       Align(alignment: Alignment.bottomRight, child: this);
+
+  Widget topLeft() =>
+      Align(alignment: Alignment.topLeft, child: this);
+
+  Widget centerLeft() =>
+      Align(alignment: Alignment.centerLeft, child: this);
+
+  Widget bottomLeft() =>
+      Align(alignment: Alignment.bottomLeft, child: this);
+
+  Widget positioned({ double? left, double? top, double? right, double? bottom, double? width, double? height }) =>
+      Positioned(left: left, top: top, right: right, bottom: bottom, width: width, height: height, child: this);
 }
