@@ -19,7 +19,8 @@ class FABBottomAppBar extends StatefulWidget {
     this.selectedColor,
     this.notchedShape,
     this.onTabSelected,
-    this.currentIndex = -1
+    this.currentIndex = -1,
+    this.fontSize = 12.0
   }) {
     assert(this.items!.length == 2 || this.items!.length == 4);
   }
@@ -33,6 +34,7 @@ class FABBottomAppBar extends StatefulWidget {
   final NotchedShape? notchedShape;
   final ValueChanged<int>? onTabSelected;
   final int currentIndex;
+  final double fontSize;
 
   @override
   State<StatefulWidget> createState() => FABBottomAppBarState();
@@ -90,7 +92,7 @@ class FABBottomAppBarState extends State<FABBottomAppBar> {
             SizedBox(height: widget.iconSize),
             Text(
               widget.centerItemText ?? '',
-              style: TextStyle(color: _selectedIndex >= widget.items!.length ? widget.selectedColor : widget.color),
+              style: TextStyle(color: _selectedIndex >= widget.items!.length ? widget.selectedColor : widget.color, fontSize: widget.fontSize),
             ),
           ],
         ),
@@ -118,7 +120,7 @@ class FABBottomAppBarState extends State<FABBottomAppBar> {
                 Icon(item!.iconData, color: color, size: widget.iconSize),
                 Text(
                   item.text??"",
-                  style: TextStyle(color: color),
+                  style: TextStyle(color: color, fontSize: widget.fontSize),
                 )
               ],
             ),
