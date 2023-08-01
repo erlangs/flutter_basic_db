@@ -6,4 +6,7 @@ export 'widgets/ink_well_button.dart';
 export 'widgets/common_widgets.dart';
 export 'widgets/common_app_bar.dart';
 export 'widgets/bottom_sheet.dart';
+export 'widgets/fab_bottom_app_bar.dart';
+export 'widgets/fab_with_icons.dart';
+export 'widgets/layout.dart';
 export 'utils/app_theme.dart';
