@@ -29,11 +29,14 @@ extension WidgetCenterX on Widget {
   Widget backgroundColor(Color color) =>
       Container(color: color, child: this);
 
-  Widget wellButton({ padding, Color? color, Decoration? decoration, width, height, onTap }) =>
+  Widget wellButton({ padding, Color? color, Decoration? decoration, shape, width, height, onTap }) =>
       Material(
           color: Colors.transparent,
-          child: Ink(
+          child:
+          Ink(
               padding: padding, decoration: decoration ?? (color != null ? BoxDecoration(color: color) : null), width: width, height: height,
-              child: InkWell( onTap: onTap, child: this))
+              child: InkWell(
+                  customBorder: shape,
+                  onTap: onTap, child: this))
       );
 }
