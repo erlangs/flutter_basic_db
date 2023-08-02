@@ -29,6 +29,9 @@ extension WidgetCenterX on Widget {
   Widget backgroundColor(Color color) =>
       Container(color: color, child: this);
 
+  Widget sizedBox({double? width, double? height}) =>
+      SizedBox(width: width, height: height, child: this);
+
   Widget wellButton({ padding, Color? color, Decoration? decoration, shape, width, height, onTap }) =>
       Material(
           color: Colors.transparent,
@@ -36,7 +39,7 @@ extension WidgetCenterX on Widget {
           Ink(
               padding: padding, decoration: decoration ?? (color != null ? BoxDecoration(color: color) : null), width: width, height: height,
               child: InkWell(
-                  customBorder: shape,
+                  customBorder: shape ?? RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                   onTap: onTap, child: this))
       );
 }
