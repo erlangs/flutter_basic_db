@@ -25,4 +25,15 @@ extension WidgetCenterX on Widget {
 
   Widget positioned({ double? left, double? top, double? right, double? bottom, double? width, double? height }) =>
       Positioned(left: left, top: top, right: right, bottom: bottom, width: width, height: height, child: this);
+
+  Widget backgroundColor(Color color) =>
+      Container(color: color, child: this);
+
+  Widget wellButton({ padding, Color? color, Decoration? decoration, width, height, onTap }) =>
+      Material(
+          color: Colors.transparent,
+          child: Ink(
+              padding: padding, decoration: decoration ?? (color != null ? BoxDecoration(color: color) : null), width: width, height: height,
+              child: InkWell( onTap: onTap, child: this))
+      );
 }
