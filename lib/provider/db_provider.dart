@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:sembast/sembast.dart';
 import 'package:tekartik_common_utils/common_utils_import.dart';
 import 'package:flutter_basic_db/model/model.dart';
-
+import 'package:sqflite_common/sqlite_api.dart' as sapi;
 
 class DbProvider {
   static const String dbName = 'entity_data.db';

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 extension WidgetCenterX on Widget {
 
+  Widget expanded() => Expanded(child: this);
+
   Widget center() =>
       Center(child: this);
 
